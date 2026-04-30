@@ -1,9 +1,45 @@
+/* Hero.module.css */
+
 .hero {
   position: relative;
   z-index: 1;
   text-align: center;
-  padding: 5rem 2rem 3.5rem;
+  /* Increased padding to give the background characters breathing room */
+  padding: 8rem 2rem 5.5rem;
   overflow: hidden;
+  background-color: var(--bg); /* Fallback to your project's dark background */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Background Image Layer */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  /* Ensure your image is named 'hero-bg.png' in the public folder */
+  background-image: url('/hero-bg.png');
+  background-size: cover;
+  background-position: center 25%;
+  background-repeat: no-repeat;
+  opacity: 0.35; /* Maintains readability of the foreground text */
+}
+
+/* Cinematic Gradient Overlay */
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(
+    to bottom,
+    rgba(10, 10, 10, 0.5) 0%,
+    transparent 40%,
+    transparent 70%,
+    var(--bg) 100% /* Fades into the site background */
+  );
 }
 
 .glow {
@@ -15,13 +51,17 @@
   height: 400px;
   background: radial-gradient(
     ellipse at center,
-    rgba(230, 57, 70, 0.1) 0%,
+    rgba(230, 57, 70, 0.15) 0%,
     transparent 68%
   );
   pointer-events: none;
+  z-index: 0;
 }
 
+/* Typography & Layout */
 .eyebrow {
+  position: relative;
+  z-index: 2;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -43,6 +83,8 @@
 }
 
 .titleWrap {
+  position: relative;
+  z-index: 2;
   overflow: hidden;
   margin-bottom: 1.25rem;
 }
@@ -62,6 +104,8 @@
 }
 
 .subtitle {
+  position: relative;
+  z-index: 2;
   font-size: 15px;
   color: var(--text2);
   font-weight: 300;
@@ -70,7 +114,10 @@
   margin: 0 auto 2rem;
 }
 
+/* Tech Stack Tags (Chips) */
 .chips {
+  position: relative;
+  z-index: 2;
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
@@ -87,10 +134,11 @@
   border: 1px solid var(--border2);
   padding: 5px 14px;
   border-radius: 50px;
-  transition: border-color var(--transition), color var(--transition);
+  transition: all var(--transition);
 }
 
 .chip:hover {
   border-color: var(--accent);
   color: var(--accent);
+  background: rgba(230, 57, 70, 0.05);
 }

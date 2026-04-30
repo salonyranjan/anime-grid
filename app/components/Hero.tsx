@@ -11,60 +11,71 @@ interface HeroProps {
 export default function Hero({ totalCount }: HeroProps) {
   return (
     <section className={styles.hero}>
-      {/* Background glow */}
+      {/* Background Image Layer */}
+      <div 
+        className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat opacity-40"
+        style={{ backgroundImage: "url('/hero-bg.png')" }}
+        aria-hidden
+      />
+      
+      {/* Background glow and gradient blend */}
       <div className={styles.glow} aria-hidden />
+      <div className="absolute inset-0 z-0 bg-gradient-to-b from-transparent to-[#0a0a0a]" aria-hidden />
 
-      <motion.div
-        className={styles.eyebrow}
-        variants={heroTextVariants}
-        initial="hidden"
-        animate="visible"
-        custom={0}
-      >
-        <span className={styles.line} />
-        Your personal anime collection
-        <span className={styles.line} />
-      </motion.div>
-
-      <div className={styles.titleWrap}>
-        <motion.h1
-          className={styles.title}
+      {/* Hero Content (kept relative z-10 to stay above the background) */}
+      <div className="relative z-10 w-full flex flex-col items-center">
+        <motion.div
+          className={styles.eyebrow}
           variants={heroTextVariants}
           initial="hidden"
           animate="visible"
-          custom={1}
+          custom={0}
         >
-          ANIME
-          <span className={styles.titleAccent}>GRID</span>
-        </motion.h1>
+          <span className={styles.line} />
+          Your personal anime collection
+          <span className={styles.line} />
+        </motion.div>
+
+        <div className={styles.titleWrap}>
+          <motion.h1
+            className={styles.title}
+            variants={heroTextVariants}
+            initial="hidden"
+            animate="visible"
+            custom={1}
+          >
+            ANIME
+            <span className={styles.titleAccent}>GRID</span>
+          </motion.h1>
+        </div>
+
+        <motion.p
+          className={styles.subtitle}
+          variants={heroTextVariants}
+          initial="hidden"
+          animate="visible"
+          custom={2}
+        >
+          Discover, track, and explore {totalCount}+ legendary series.
+          <br />
+          Powered by Next.js Server Actions with infinite scroll.
+        </motion.p>
+
+        <motion.div
+          className={styles.chips}
+          variants={fadeIn}
+          initial="hidden"
+          animate="visible"
+        >
+          {["Server Actions", "Infinite Scroll", "Framer Motion", "Next.js 14"].map(
+            (tag) => (
+              <span key={tag} className={styles.chip}>
+                {tag}
+              </span>
+            )
+          )}
+        </motion.div>
       </div>
-
-      <motion.p
-        className={styles.subtitle}
-        variants={heroTextVariants}
-        initial="hidden"
-        animate="visible"
-        custom={2}
-      >
-        Discover, track, and explore {totalCount}+ legendary series.
-        <br />
-        Powered by Next.js Server Actions with infinite scroll.
-      </motion.p>
-
-      <motion.div
-        className={styles.chips}
-        variants={fadeIn}
-        initial="hidden"
-        animate="visible"
-      >
-        {["Server Actions", "Infinite Scroll", "Framer Motion", "Next.js 14"].map(
-          (tag) => (
-            <span key={tag} className={styles.chip}>
-              {tag}
-            </span>
-          )
-        )}
-      </motion.div>
     </section>
   );
 }
