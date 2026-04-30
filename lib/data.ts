@@ -7,7 +7,7 @@ export const ANIME_DATABASE: Anime[] = [
     displayName: "Bleach",
     image: {
       original:
-        "https://m.media-amazon.com/images/M/MV5BZjE0YjVjODQtZGY2NS00MDcyLThhMDAtZGQwMTZiOWNmNjRiXkEyXkFqcGdeQXVyNTA4NzY1MzY@._V1_FMjpg_UX1000_.jpg",
+        "https://cdn.myanimelist.net/images/anime/3/40451.jpg",
     },
     kind: "TV",
     episodes: 366,
@@ -45,7 +45,7 @@ export const ANIME_DATABASE: Anime[] = [
     displayName: "Dragon Ball Z",
     image: {
       original:
-        "https://m.media-amazon.com/images/M/MV5BMGMyOThiMGUtYmFmZi00YWM0LWJiM2QtZGMwM2Q2ODE4MzhhXkEyXkFqcGdeQXVyMjc2Nzg5OTQ@._V1_FMjpg_UX1000_.jpg",
+        "https://cdn.myanimelist.net/images/anime/6/20936.jpg",
     },
     kind: "TV",
     episodes: 153,
@@ -83,7 +83,7 @@ export const ANIME_DATABASE: Anime[] = [
     displayName: "Fullmetal Alchemist: Brotherhood",
     image: {
       original:
-        "https://m.media-amazon.com/images/M/MV5BZmEzN2YzOTItMDI5MS00MGU4LWI1NWQtOTg5ZThhNGQwYTEzXkEyXkFqcGdeQXVyNTA4NzY1MzY@._V1_.jpg",
+        "https://cdn.myanimelist.net/images/anime/1223/96541.jpg",
     },
     kind: "TV",
     episodes: 64,
@@ -232,7 +232,7 @@ export const ANIME_DATABASE: Anime[] = [
     displayName: "Death Note",
     image: {
       original:
-        "https://m.media-amazon.com/images/M/MV5BNjRiNmNjMmMtN2U2Yi00ODgxLTk3OTMtMmI1MTI1NjYyZTEzXkEyXkFqcGdeQXVyNjAwNDUxODI@._V1_.jpg",
+        "https://cdn.myanimelist.net/images/anime/9/9453.jpg",
     },
     kind: "TV",
     episodes: 37,
@@ -251,7 +251,7 @@ export const ANIME_DATABASE: Anime[] = [
     displayName: "Steins;Gate",
     image: {
       original:
-        "https://m.media-amazon.com/images/M/MV5BMjUxMzE4ZGQtZDg5My00ZmVhLThjYjYtZDkyOTQzMzU3ZmNhXkEyXkFqcGdeQXVyNjAwNDUxODI@._V1_.jpg",
+        "https://cdn.myanimelist.net/images/anime/1935/127974.jpg",
     },
     kind: "TV",
     episodes: 24,
@@ -270,7 +270,7 @@ export const ANIME_DATABASE: Anime[] = [
     displayName: "Vinland Saga",
     image: {
       original:
-        "https://m.media-amazon.com/images/M/MV5BZjI0NTMxODItZDYwMi00YmYzLTliNDMtNzc0ZGI4ZmUzODA3XkEyXkFqcGdeQXVyMTMzNDExODE5._V1_.jpg",
+        "https://cdn.myanimelist.net/images/anime/1500/103005.jpg",
     },
     kind: "TV",
     episodes: 24,
