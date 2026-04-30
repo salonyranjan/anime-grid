@@ -1,19 +1,43 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
 
+/**
+ * Metadata configuration for AnimeGrid.
+ * Setting metadataBase resolves the warning for social media image resolution.
+ */
 export const metadata: Metadata = {
-  title: "Anime Grid — Your Personal Collection",
+  metadataBase: new URL(
+    process.env.NODE_ENV === "production"
+      ? "https://your-deployment-url.vercel.app" // Replace with your actual domain
+      : "http://localhost:3000"
+  ),
+  title: "Anime Grid — Your Personal Collection Tracker",
   description:
-    "Discover, track, and explore your favourite anime series with Anime Grid.",
-  keywords: ["anime", "manga", "collection", "tracker", "watchlist"],
-  authors: [{ name: "Anime Grid" }],
+    "Discover, track, and explore legendary anime series with AnimeGrid, built with Next.js 14.",
+  keywords: ["anime", "manga", "collection", "tracker", "watchlist", "Next.js", "Server Actions"],
+  authors: [{ name: "Salony Ranjan" }],
+  icons: {
+    icon: "/favicon.ico",
+    apple: "/logo.png",
+  },
   openGraph: {
     title: "Anime Grid",
     description: "Your personal anime collection tracker",
     type: "website",
+    images: [
+      {
+        url: "/logo.png",
+        width: 1200,
+        height: 630,
+        alt: "AnimeGrid Neon Logo",
+      },
+    ],
   },
 };
 
+/**
+ * Viewport settings to ensure the dark theme is respected by mobile browsers.
+ */
 export const viewport: Viewport = {
   themeColor: "#080a0f",
   colorScheme: "dark",
@@ -25,8 +49,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body>{children}</body>
+    <html lang="en" suppressHydrationWarning translate="no">
+      <body>
+        {children}
+      </body>
     </html>
   );
 }

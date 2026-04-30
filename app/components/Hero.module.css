@@ -24,7 +24,7 @@
   background-size: cover;
   background-position: center 25%;
   background-repeat: no-repeat;
-  opacity: 0.35; /* Maintains readability of the foreground text */
+  opacity: 1; /* Maintains readability of the foreground text */
 }
 
 /* Cinematic Gradient Overlay */
@@ -78,7 +78,7 @@
   width: 40px;
   height: 1px;
   background: var(--accent);
-  opacity: 0.5;
+  opacity: 1;
   display: inline-block;
 }
 

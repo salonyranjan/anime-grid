@@ -1,11 +1,16 @@
+/* Navbar.module.css */
+
 .nav {
   position: sticky;
   top: 0;
   z-index: 50;
-  background: rgba(8, 10, 15, 0.85);
+  /* Darker background to let the glow pop */
+  background: rgba(4, 6, 10, 0.9);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  border-bottom: 1px solid var(--border);
+  /* Accent-colored border with a subtle shadow */
+  border-bottom: 1px solid rgba(230, 57, 70, 0.4);
+  box-shadow: 0 2px 20px rgba(230, 57, 70, 0.15);
   height: 60px;
 }
 
@@ -29,20 +34,32 @@
   align-items: center;
   gap: 8px;
   flex-shrink: 0;
-  transition: opacity var(--transition);
+  transition: all var(--transition);
+  /* Strong neon white text shadow for "ANIME" */
+  text-shadow: 0 0 7px rgba(255, 255, 255, 0.7),
+               0 0 15px rgba(255, 255, 255, 0.5);
 }
 
 .logo:hover {
-  opacity: 0.85;
+  /* Intensify the glow on hover */
+  text-shadow: 0 0 10px rgba(255, 255, 255, 1),
+               0 0 20px rgba(255, 255, 255, 0.8);
 }
 
 .logoIcon {
   color: var(--accent);
   flex-shrink: 0;
+  /* Adds a glow to the Lucide Tv2 icon */
+  filter: drop-shadow(0 0 5px var(--accent))
+          drop-shadow(0 0 10px rgba(230, 57, 70, 0.5));
 }
 
 .logoAccent {
   color: var(--accent);
+  /* Signature Neon Red glow for "GRID" */
+  text-shadow: 0 0 5px var(--accent),
+               0 0 10px var(--accent),
+               0 0 20px rgba(230, 57, 70, 0.6);
 }
 
 .tagline {
@@ -50,6 +67,8 @@
   color: var(--text3);
   letter-spacing: 0.05em;
   display: none;
+  /* Subtler glow for the tagline to keep hierarchy */
+  text-shadow: 0 0 4px rgba(255, 255, 255, 0.3);
 }
 
 @media (min-width: 640px) {
@@ -66,12 +85,16 @@
   font-size: 11px;
   color: var(--teal);
   background: rgba(45, 212, 191, 0.08);
-  border: 1px solid rgba(45, 212, 191, 0.2);
+  /* The badge itself acts as a cyan neon component */
+  border: 1px solid rgba(45, 212, 191, 0.4);
+  box-shadow: 0 0 10px rgba(45, 212, 191, 0.2);
   padding: 4px 10px;
   border-radius: 50px;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   font-weight: 500;
+  /* Cyan Neon glow for the text */
+  text-shadow: 0 0 5px var(--teal);
 }
 
 .dot {
@@ -79,10 +102,26 @@
   height: 6px;
   border-radius: 50%;
   background: var(--teal);
-  animation: pulse 2s ease-in-out infinite;
+  /* Intensified cyan dot glow with flicker effect */
+  box-shadow: 0 0 5px var(--teal),
+              0 0 10px var(--teal);
+  animation: pulse 2s ease-in-out infinite, neonFlicker 4s infinite;
 }
 
+/* Updated pulse to feel more active */
 @keyframes pulse {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.4; }
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.6; transform: scale(1.1); }
+}
+
+/* Subtle, authentic neon flickering effect */
+@keyframes neonFlicker {
+  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+    box-shadow: 0 0 5px var(--teal),
+                0 0 10px var(--teal);
+  }
+  20%, 24%, 55% {
+    box-shadow: none;
+    opacity: 0.5;
+  }
 }

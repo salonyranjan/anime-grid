@@ -9,6 +9,14 @@ interface HeroProps {
 }
 
 export default function Hero({ totalCount }: HeroProps) {
+  // Unique labels mapping your tech stack to system-level terminology
+  const techChips = [
+    "V14 Protocol",      // Next.js 14
+    "Instant Execution", // Server Actions
+    "Eternal Stream",    // Infinite Scroll
+    "Kinetic Interface"  // Framer Motion
+  ];
+
   return (
     <section className={styles.hero}>
       {/* Background Image Layer */}
@@ -22,7 +30,6 @@ export default function Hero({ totalCount }: HeroProps) {
       <div className={styles.glow} aria-hidden />
       <div className="absolute inset-0 z-0 bg-gradient-to-b from-transparent to-[#0a0a0a]" aria-hidden />
 
-      {/* Hero Content (kept relative z-10 to stay above the background) */}
       <div className="relative z-10 w-full flex flex-col items-center">
         <motion.div
           className={styles.eyebrow}
@@ -58,7 +65,7 @@ export default function Hero({ totalCount }: HeroProps) {
         >
           Discover, track, and explore {totalCount}+ legendary series.
           <br />
-          Powered by Next.js Server Actions with infinite scroll.
+          Your anime journey, archived in high definition.
         </motion.p>
 
         <motion.div
@@ -67,13 +74,15 @@ export default function Hero({ totalCount }: HeroProps) {
           initial="hidden"
           animate="visible"
         >
-          {["Server Actions", "Infinite Scroll", "Framer Motion", "Next.js 14"].map(
-            (tag) => (
-              <span key={tag} className={styles.chip}>
-                {tag}
-              </span>
-            )
-          )}
+          {techChips.map((tag) => (
+            <motion.span 
+              key={tag} 
+              className={styles.chip}
+              whileHover={{ scale: 1.05, borderColor: "var(--accent)" }}
+            >
+              {tag}
+            </motion.span>
+          ))}
         </motion.div>
       </div>
     </section>
