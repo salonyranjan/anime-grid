@@ -11,12 +11,6 @@
   <img src="https://img.shields.io/badge/Deployment-Vercel-black?style=for-the-badge&logo=vercel" alt="Vercel" />
 </p>
 
-<p align="center">
-  <img src="https://img.shields.io/github/stars/your-username/anime-grid?style=flat-square&color=E63946" alt="Stars" />
-  <img src="https://img.shields.io/github/forks/your-username/anime-grid?style=flat-square&color=2DD4BF" alt="Forks" />
-  <img src="https://img.shields.io/github/license/your-username/anime-grid?style=flat-square&color=gray" alt="License" />
-</p>
-
 ---
 
 **AnimeGrid** is a cinematic, high-performance web application engineered for the modern anime enthusiast. It serves as a high-fidelity archive for tracking and discovering legendary series, built with a focus on fluid kinetics and agentic-level efficiency.
