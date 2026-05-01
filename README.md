@@ -1,5 +1,3 @@
-# 📺 ANIMEGRID — Your Personal Collection Tracker
-
 <div align="center">
 
 <!-- ═══════════════════════════════════════════════════════════════ -->
@@ -11,7 +9,7 @@
 <br/>
 
 <a href="https://anime-grid-demo.vercel.app">
-  <img src="./public/anime-grid-hero.png" alt="Anime Grid Demo" width="100%" style="border-radius: 12px; box-shadow: 0 0 40px #ff4d4d;" />
+  <img src="./public/hero-banner.png" alt="Anime Grid Demo" width="100%" style="border-radius: 12px; box-shadow: 0 0 40px #ff4d4d;" />
 </a>
 
 <br/><br/>
