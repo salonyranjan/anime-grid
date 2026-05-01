@@ -141,14 +141,13 @@ graph TD
 
 | Home (Masonry Grid) | Anime Detail Card |
 |:---:|:---:|
-| <img src="./screens/home.png" alt="Home Grid" width="100%" /> | <img src="./screens/detail.png" alt="Detail Card" width="100%" /> |
+| <img src="./screens/detail.png" alt="Home Grid" width="100%" /> | <img src="./screens/home.png" alt="Detail Card" width="100%" /> |
 
 | Mobile View | Dark Theme |
 |:---:|:---:|
 | <img src="./screens/mobile.png" alt="Mobile" width="100%" /> | <img src="./screens/dark.png" alt="Dark Theme" width="100%" /> |
 
 </div>
----
 
 ## 5️⃣ ⚡ Performance
 
