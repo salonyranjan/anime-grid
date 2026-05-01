@@ -390,7 +390,7 @@ Distributed under the **MIT License**. See [`LICENSE`](./LICENSE) for details.
 ```text
 MIT License
 
-Copyright (c) 2025 <Your Name>
+Copyright (c) 2026 <Your Name>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -415,19 +415,19 @@ furnished to do so, subject to the following conditions:
       <p>🧑‍💻 Full‑Stack Engineer &amp; UI/UX enthusiast</p>
       <p><em>"Building beautiful, performant web experiences for the anime community."</em></p>
       <br/>
-      <a href="https://www.linkedin.com/in/your-profile/">
+      <a href="https://www.linkedin.com/in/salony-ranjan-b63200280">
         <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" />
       </a>
       &nbsp;
-      <a href="https://github.com/your-username">
+      <a href="https://github.com/salonyranjan">
         <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" />
       </a>
       &nbsp;
-      <a href="mailto:your@email.com">
+      <a href="mailto:salonyranjan@gmail.com">
         <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" />
       </a>
       &nbsp;
-      <a href="https://your-portfolio.com">
+      <a href="https://vertex-flow-phi.vercel.app/">
         <img src="https://img.shields.io/badge/Portfolio-ff4d4d?style=for-the-badge&logo=react&logoColor=black" />
       </a>
     </td>
@@ -460,7 +460,7 @@ If **anime‑grid** helped you discover your next binge, consider starring the r
 
 <br/>
 
-*Made with* ⚡ *by* **Your Name** · © 2026 Anime‑Grid · MIT License  
+*Made with* ⚡ *by* **Salony Ranjan** · © 2026 Anime‑Grid · MIT License  
 
 <img src="https://readme-typing-svg.herokuapp.com?font=Orbitron&weight=600&size=13&duration=4000&pause=1000&color=ff4d4d&center=true&vCenter=true&width=500&lines=SYSTEM+STATUS%3A+FULLY+OPERATIONAL+⚡;CRAFTED+FOR+ANIME+Lovers+🌸;STAY+CURIOUS+·+WATCH+·+BUILD" />
 
