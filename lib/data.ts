@@ -422,21 +422,6 @@ export const ANIME_DATABASE: Anime[] = [
     description: "Two hikkomori siblings are summoned to a world where all conflicts are resolved through games, and they set out to conquer the sixteen races."
   },
   {
-    id: "30",
-    name: "the_devil_is_a_part_timer",
-    displayName: "The Devil is a Part-Timer",
-    image: { original: "https://cdn.myanimelist.net/images/anime/10/50643.jpg" }, // MAL ID: 15809
-    kind: "TV",
-    episodes: 13,
-    episodes_aired: 13,
-    score: "7.90",
-    genre: ["Comedy", "Fantasy", "Supernatural"],
-    year: 2013,
-    status: "completed",
-    studio: "White Fox",
-    description: "The Demon Lord Satan is transported to modern-day Tokyo and must work at a fast-food restaurant to survive while plotting his return."
-  },
-  {
     id: "31",
     name: "konosuba",
     displayName: "Konosuba",
@@ -530,7 +515,7 @@ export const ANIME_DATABASE: Anime[] = [
     id: "37",
     name: "ergo_proxy",
     displayName: "Ergo Proxy",
-    image: { original: "https://cdn.myanimelist.net/images/anime/11/48443.jpg" }, // MAL ID: 790
+    image: { original: "https://i.pinimg.com/736x/83/58/9a/83589a9da39324f433aa413398a564c9.jpg" }, // MAL ID: 790
     kind: "TV",
     episodes: 23,
     episodes_aired: 23,
@@ -722,21 +707,6 @@ export const ANIME_DATABASE: Anime[] = [
     description: "A city boy enrolls in an agricultural school in rural Hokkaido, learning about farm life and finding his own path."
   },
   {
-    id: "50",
-    name: "the_ancient_magus_bride",
-    displayName: "The Ancient Magus' Bride",
-    image: { original: "https://cdn.myanimelist.net/images/anime/9/87742.jpg" }, // MAL ID: 35062
-    kind: "TV",
-    episodes: 24,
-    episodes_aired: 24,
-    score: "7.90",
-    genre: ["Fantasy", "Romance", "Magic"],
-    year: 2017,
-    status: "completed",
-    studio: "WIT Studio",
-    description: "A lonely Japanese girl is sold at auction to a non-human magus who intends to make her his bride, leading to a magical journey."
-  },
-  {
     id: "51",
     name: "black_butler",
     displayName: "Black Butler",
@@ -900,21 +870,6 @@ export const ANIME_DATABASE: Anime[] = [
     status: "completed",
     studio: "Studio Deen",
     description: "In a rural village, a series of mysterious deaths occur every year during the Watanagashi Festival, and newcomers uncover the dark truth."
-  },
-  {
-    id: "62",
-    name: "when_they_cry",
-    displayName: "When They Cry",
-    image: { original: "https://cdn.myanimelist.net/images/anime/12/11516.jpg" }, // MAL ID: 934 (same series)
-    kind: "TV",
-    episodes: 26,
-    episodes_aired: 26,
-    score: "8.10",
-    genre: ["Mystery", "Psychological", "Supernatural"],
-    year: 2006,
-    status: "completed",
-    studio: "Studio Deen",
-    description: "In a secluded village, a series of brutal murders occur, and a boy must unravel the mystery behind the Hinamizawa syndrome."
   },
   {
     id: "63",
@@ -1097,21 +1052,6 @@ export const ANIME_DATABASE: Anime[] = [
     description: "A former bully reunites with the deaf girl he tormented in elementary school, seeking redemption and friendship in this emotional story."
   },
   {
-    id: "75",
-    name: "your_lie_in_april",
-    displayName: "Your Lie in April",
-    image: { original: "https://cdn.myanimelist.net/images/anime/3/67177.jpg" }, // MAL ID: 23273
-    kind: "TV",
-    episodes: 22,
-    episodes_aired: 22,
-    score: "8.68",
-    genre: ["Drama", "Music", "Romance"],
-    year: 2014,
-    status: "completed",
-    studio: "A-1 Pictures",
-    description: "A piano prodigy who lost his ability to play after his mother's death meets a violinist who helps him rediscover his love for music."
-  },
-  {
     id: "76",
     name: "anohana",
     displayName: "Anohana",
@@ -1125,36 +1065,6 @@ export const ANIME_DATABASE: Anime[] = [
     status: "completed",
     studio: "A-1 Pictures",
     description: "A group of childhood friends grow apart after the death of one of them, until her ghost appears to one of them, asking for a wish to be fulfilled."
-  },
-  {
-    id: "77",
-    name: "violet_evergarden",
-    displayName: "Violet Evergarden",
-    image: { original: "https://cdn.myanimelist.net/images/anime/1795/95088.jpg" }, // MAL ID: 33352
-    kind: "TV",
-    episodes: 13,
-    episodes_aired: 13,
-    score: "8.50",
-    genre: ["Drama", "Sci-Fi", "Slice of Life"],
-    year: 2018,
-    status: "completed",
-    studio: "Kyoto Animation",
-    description: "A former soldier turned Auto Memory Doll helps people express their feelings through writing letters, while seeking the meaning of 'I love you'."
-  },
-  {
-    id: "78",
-    name: "made_in_abyss",
-    displayName: "Made in Abyss",
-    image: { original: "https://cdn.myanimelist.net/images/anime/11/87428.jpg" }, // MAL ID: 34599
-    kind: "TV",
-    episodes: 13,
-    episodes_aired: 13,
-    score: "8.70",
-    genre: ["Adventure", "Drama", "Fantasy"],
-    year: 2017,
-    status: "completed",
-    studio: "Kinema Citrus",
-    description: "A young girl and a robot descend into the Abyss, a massive hole filled with wonders and horrors, searching for her mother."
   },
   {
     id: "79",
@@ -1175,7 +1085,7 @@ export const ANIME_DATABASE: Anime[] = [
     id: "80",
     name: "children_of_the_sea",
     displayName: "Children of the Sea",
-    image: { original: "https://cdn.myanimelist.net/images/anime/1020/100411.jpg" }, // MAL ID: 39456
+    image: { original: "https://i.pinimg.com/originals/0c/72/f0/0c72f0ce63543084eedf4c411e9a3d25.jpg" }, // MAL ID: 39456
     kind: "Movie",
     episodes: 1,
     episodes_aired: 1,
@@ -1185,36 +1095,6 @@ export const ANIME_DATABASE: Anime[] = [
     status: "completed",
     studio: "Studio 4°C",
     description: "A girl experiencing a spiritual disconnect from her family meets two mysterious boys raised by dugongs, leading to an oceanic adventure."
-  },
-  {
-    id: "81",
-    name: "bunny_drop",
-    displayName: "Bunny Drop",
-    image: { original: "https://cdn.myanimelist.net/images/anime/2/29665.jpg" }, // MAL ID: 10162
-    kind: "TV",
-    episodes: 11,
-    episodes_aired: 11,
-    score: "8.10",
-    genre: ["Slice of Life", "Drama"],
-    year: 2011,
-    status: "completed",
-    studio: "Production I.G",
-    description: "A 30-year-old bachelor discovers he has a six-year-old daughter after his grandfather's death, and decides to raise her himself."
-  },
-  {
-    id: "82",
-    name: "usagi_drop",
-    displayName: "Usagi Drop",
-    image: { original: "https://cdn.myanimelist.net/images/anime/2/29665.jpg" }, // MAL ID: 10162
-    kind: "TV",
-    episodes: 11,
-    episodes_aired: 11,
-    score: "8.10",
-    genre: ["Slice of Life", "Drama"],
-    year: 2011,
-    status: "completed",
-    studio: "Production I.G",
-    description: "A 30-year-old bachelor discovers he has a six-year-old daughter after his grandfather's death, and decides to raise her himself."
   },
   {
     id: "83",
@@ -1264,7 +1144,7 @@ export const ANIME_DATABASE: Anime[] = [
   {
     id: "86",
     name: "shigatsu_wa_kimi_no_uso",
-    displayName: "Shigatsu wa Kimi no Uso",
+    displayName: "Your Lie in April",
     image: { original: "https://cdn.myanimelist.net/images/anime/3/67177.jpg" }, // MAL ID: 23273
     kind: "TV",
     episodes: 22,
@@ -1325,7 +1205,7 @@ export const ANIME_DATABASE: Anime[] = [
     id: "90",
     name: "the_irregular_at_magic_high_school",
     displayName: "The Irregular at Magic High School",
-    image: { original: "https://cdn.myanimelist.net/images/anime/11/53413.jpg" }, // MAL ID: 20785
+    image: { original: "https://i.pinimg.com/1200x/f5/11/a2/f511a2b5da8d32c53ced147ae718febc.jpg" }, // MAL ID: 20785
     kind: "TV",
     episodes: 26,
     episodes_aired: 26,
@@ -1340,7 +1220,7 @@ export const ANIME_DATABASE: Anime[] = [
     id: "91",
     name: "the_misfit_of_demon_king_academy",
     displayName: "The Misfit of Demon King Academy",
-    image: { original: "https://cdn.myanimelist.net/images/anime/1155/107567.jpg" }, // MAL ID: 40748
+    image: { original: "https://i.pinimg.com/736x/b8/b2/24/b8b224231db17d6907f64bb55282dbb9.jpg" }, // MAL ID: 40748
     kind: "TV",
     episodes: 13,
     episodes_aired: 13,
@@ -1355,7 +1235,7 @@ export const ANIME_DATABASE: Anime[] = [
     id: "92",
     name: "that_time_i_got_reincarnated_as_a_slime",
     displayName: "That Time I Got Reincarnated as a Slime",
-    image: { original: "https://cdn.myanimelist.net/images/anime/1557/106476.jpg" }, // MAL ID: 37430
+    image: { original: "https://i.pinimg.com/736x/b6/0d/b8/b60db8a2a69db4a12235f4ff4aa5fcf6.jpg" }, // MAL ID: 37430
     kind: "TV",
     episodes: 24,
     episodes_aired: 24,
@@ -1370,7 +1250,7 @@ export const ANIME_DATABASE: Anime[] = [
     id: "93",
     name: "so_im_a_spider_so_what",
     displayName: "So I'm a Spider, So What?",
-    image: { original: "https://cdn.myanimelist.net/images/anime/1183/107693.jpg" }, // MAL ID: 37993
+    image: { original: "https://i.pinimg.com/236x/30/f1/a8/30f1a88ffc6c07ea1034fd507dea96ef.jpg" }, // MAL ID: 37993
     kind: "TV",
     episodes: 24,
     episodes_aired: 24,
@@ -1385,7 +1265,7 @@ export const ANIME_DATABASE: Anime[] = [
     id: "94",
     name: "kuma_kuma_kuma_bear",
     displayName: "Kuma Kuma Kuma Bear",
-    image: { original: "https://cdn.myanimelist.net/images/anime/1043/107647.jpg" }, // MAL ID: 40195
+    image: { original: "https://i.pinimg.com/1200x/83/f6/2a/83f62a73abe3b7349bbf1aab1733caeb.jpg" }, // MAL ID: 40195
     kind: "TV",
     episodes: 12,
     episodes_aired: 12,
@@ -1400,7 +1280,7 @@ export const ANIME_DATABASE: Anime[] = [
     id: "95",
     name: "didnt_i_say_to_make_my_abilities_average_in_the_next_life",
     displayName: "Didn't I Say to Make My Abilities Average in the Next Life?",
-    image: { original: "https://cdn.myanimelist.net/images/anime/1628/102553.jpg" }, // MAL ID: 38844
+    image: { original: "https://i.pinimg.com/736x/62/e1/76/62e176b887d74b5066db1c24e077e0f8.jpg" }, // MAL ID: 38844
     kind: "TV",
     episodes: 12,
     episodes_aired: 12,
@@ -1413,8 +1293,8 @@ export const ANIME_DATABASE: Anime[] = [
   },
   {
     id: "96",
-    name: "the_devil_is_a_part_timer_2",
-    displayName: "The Devil is a Part-Timer (S2)",
+    name: "the_devil_is_a_part_timer",
+    displayName: "The Devil is a Part-Timer",
     image: { original: "https://cdn.myanimelist.net/images/anime/10/50643.jpg" }, // MAL ID: 15809
     kind: "TV",
     episodes: 13,
@@ -1428,8 +1308,8 @@ export const ANIME_DATABASE: Anime[] = [
   },
   {
     id: "97",
-    name: "the_ancient_magus_bride_2",
-    displayName: "The Ancient Magus' Bride (S2)",
+    name: "the_ancient_magus_bride",
+    displayName: "The Ancient Magus' Bride",
     image: { original: "https://cdn.myanimelist.net/images/anime/9/87742.jpg" }, // MAL ID: 35062
     kind: "TV",
     episodes: 24,
@@ -1451,15 +1331,15 @@ export const ANIME_DATABASE: Anime[] = [
     episodes_aired: 12,
     score: "8.30",
     genre: ["Horror", "Mystery", "Thriller"],
-    year: 2019,
+    year: 2021,
     status: "completed",
     studio: "CloverWorks",
-    description: "Children living in an orphanage discover the terrifying truth about their world and plot a daring escape to save themselves and their siblings."
+    description: "Having escaped the farm, Emma and her friends face new dangers in the outside world as they search for a way to save all children from the demons."
   },
   {
     id: "99",
-    name: "violet_evergarden_2",
-    displayName: "Violet Evergarden (Rewatch)",
+    name: "violet_evergarden",
+    displayName: "Violet Evergarden",
     image: { original: "https://cdn.myanimelist.net/images/anime/1795/95088.jpg" }, // MAL ID: 33352
     kind: "TV",
     episodes: 13,
@@ -1473,8 +1353,8 @@ export const ANIME_DATABASE: Anime[] = [
   },
   {
     id: "100",
-    name: "made_in_abyss_2",
-    displayName: "Made in Abyss (Rewatch)",
+    name: "made_in_abyss",
+    displayName: "Made in Abyss",
     image: { original: "https://cdn.myanimelist.net/images/anime/11/87428.jpg" }, // MAL ID: 34599
     kind: "TV",
     episodes: 13,
@@ -1485,7 +1365,7 @@ export const ANIME_DATABASE: Anime[] = [
     status: "completed",
     studio: "Kinema Citrus",
     description: "A young girl and a robot descend into the Abyss, a massive hole filled with wonders and horrors, searching for her mother."
-  }
+  },
 ];
 
 const PAGE_SIZE = 6;

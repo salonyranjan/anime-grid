@@ -13,9 +13,9 @@ const nextConfig = {
         pathname: '/**', // Allows all paths from this host
       },
       {
-        protocol: "https",
-        hostname: "image.tmdb.org",
-        pathname: "/t/p/**",
+        protocol: 'https',
+        hostname: 'i.pinimg.com',
+        pathname: '/**',
       },
       ],
   },

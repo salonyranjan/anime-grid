@@ -39,13 +39,13 @@ export default function AnimeCard({
   const [imgSrc, setImgSrc] = useState(anime.image.original);
   const [retryAttempted, setRetryAttempted] = useState(false);
   
-  const FALLBACK_SRC = "/placeholder.svg";
+  const FALLBACK_SRC = "/placeholder.svg"; // Local asset
   const score = parseFloat(anime.score);
   const scoreColor = score >= 9 ? "var(--gold)" : score >= 8.5 ? "var(--blue)" : "var(--accent2)";
 
   /**
-   * Handles 404 errors by fetching a fresh URL from the Jikan API 
-   * before showing the [ SIGNAL_LOST ] state.
+   * Smart Recovery: Handles image load failures by attempting to fetch a fresh URL 
+   * from the Jikan API dynamically.
    */
   const handleError = async () => {
     if (retryAttempted) {
@@ -91,7 +91,7 @@ export default function AnimeCard({
           src={imgSrc}
           alt={anime.displayName}
           fill
-          unoptimized={true} // Bypasses local DNS issues and strict hostname checks
+          unoptimized={true} // Bypasses local DNS and upstream proxy errors
           priority={rank <= 6}
           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
           className={`${styles.img} ${status === "success" ? "opacity-100" : "opacity-0"}`}
@@ -100,7 +100,7 @@ export default function AnimeCard({
         />
         <div className={styles.imgOverlay} />
 
-        {/* Dynamic Error UI */}
+        {/* Dynamic Error UI - Themed for V14 */}
         {status === "error" && (
           <div className="absolute inset-0 flex flex-col items-center justify-center bg-black/60 backdrop-blur-sm z-10">
             <div className="text-cyan-500 animate-pulse font-mono text-[10px] tracking-tighter uppercase">
@@ -110,6 +110,7 @@ export default function AnimeCard({
           </div>
         )}
 
+        {/* Rank & Score Badges */}
         <div className={`${styles.rank} ${rank <= 3 ? styles.topRank : ""}`}>
           #{rank}
         </div>
@@ -118,6 +119,7 @@ export default function AnimeCard({
           {score}
         </div>
 
+        {/* Favourites Toggle */}
         <motion.button
           className={`${styles.favBtn} ${isFavourite ? styles.favActive : ""}`}
           onClick={(e) => {
@@ -129,6 +131,7 @@ export default function AnimeCard({
           <Star size={13} fill={isFavourite ? "currentColor" : "none"} strokeWidth={2} />
         </motion.button>
 
+        {/* Status Dot */}
         <div
           className={styles.statusDot}
           style={{ backgroundColor: statusColors[anime.status] }}
@@ -136,6 +139,7 @@ export default function AnimeCard({
         />
       </div>
 
+      {/* Body Content */}
       <div className={styles.body}>
         <h3 className={styles.title}>{anime.displayName}</h3>
 
@@ -154,6 +158,7 @@ export default function AnimeCard({
           </span>
         </div>
 
+        {/* Genre Tags */}
         <div className={styles.genres}>
           {anime.genre.slice(0, 2).map((g: string) => (
             <span key={g} className={styles.genre}>
