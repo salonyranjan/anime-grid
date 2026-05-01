@@ -110,6 +110,7 @@
   <tr><td>🔍</td><td><strong>SEO Optimised</strong></td><td>Open Graph, JSON-LD, semantic headings, <code>next/image</code> for zero CLS</td></tr>
   <tr><td>⚡</td><td><strong>Turbopack Builds</strong></td><td>Production bundles in under 3 seconds</td></tr>
   <tr><td>🌐</td><td><strong>PWA Ready</strong></td><td><code>site.webmanifest</code> included — installable, offline groundwork laid</td></tr>
+  <tr><td>🛠️</td><td><strong>Smart Image Recovery</strong></td><td>Auto-detects 404 CDN errors from MyAnimeList and dynamically fetches fresh posters via Jikan API — zero broken images</td></tr>
 </table>
 
 ---
@@ -274,11 +275,12 @@ sequenceDiagram
 | ⚙️ Capability | 🔬 Implementation | 🏆 Result |
 |:---|:---|:---|
 | 🔷 Type Safety | TypeScript 5 strict mode | Zero runtime errors |
-| ⚡ Build Speed | Turbopack | Sub-3s production build |
+| ⚡ Build Speed | Next.js 15 Turbopack | Sub-3s production build |
 | 🔐 API Security | Server-side proxy + env vars | Keys never reach browser |
 | 📱 Responsive | Mobile-first CSS Grid | 320px → 4K support |
 | ♾️ Scroll | Intersection Observer | 1000+ cards, no jank |
 | ♻️ WS Resilience | Exponential backoff | Self-healing live stream |
+| 🛠️ Image Recovery | 404 detection → Jikan re-fetch | Zero broken poster images |
 
 ---
 
@@ -288,7 +290,7 @@ sequenceDiagram
 
 | 🏠 Home — Masonry Grid | 🎌 Anime Detail |
 |:---:|:---:|
-| <img src="./screens/detail.png" width="100%" /> | <img src="./screens/home.png" width="100%" /> |
+| <img src="./screens/home.png" width="100%" /> | <img src="./screens/detail.png" width="100%" /> |
 
 | 📱 Mobile (320px) | 🌙 Neon Dark Close-Up |
 |:---:|:---:|
@@ -395,7 +397,8 @@ cp .env.example .env.local
 
 ```env
 ANIME_API_BASE_URL=https://api.jikan.moe/v4
-ANIME_API_KEY=your_key_if_required
+# Jikan v4 is free & keyless — key only needed for higher rate limits
+ANIME_API_KEY=optional_for_higher_rate_limits
 NEXT_PUBLIC_WS_URL=wss://your-ws-server.com/anime-feed
 NEXT_PUBLIC_APP_URL=http://localhost:3000
 ```
@@ -422,6 +425,18 @@ npm run build && npm start
 2. Import at vercel.com/new
 3. Add env vars (ANIME_API_BASE_URL, ANIME_API_KEY, NEXT_PUBLIC_WS_URL)
 4. Click Deploy ✅  — live in under 60 seconds
+```
+
+> ⚠️ **Deployment Gotcha — Image Hostnames:** Ensure `cdn.myanimelist.net` and `i.pinimg.com` are whitelisted in `next.config.js` under `images.remotePatterns` before deploying, or Vercel will throw a build error for unrecognised image hosts.
+
+```js
+// next.config.js
+images: {
+  remotePatterns: [
+    { hostname: 'cdn.myanimelist.net' },
+    { hostname: 'i.pinimg.com' },
+  ],
+},
 ```
 
 ### 🐳 Docker
