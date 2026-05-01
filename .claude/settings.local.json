@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(node -e \"const fs=require\\('fs'\\); const lines=fs.readFileSync\\('lib/data.ts','utf8'\\).split\\('\\\\n'\\); console.log\\(JSON.stringify\\(lines[1537]\\)\\);\")"
+    ]
+  }
+}
