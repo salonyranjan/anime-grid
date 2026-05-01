@@ -41,7 +41,7 @@
 
 <br/>
 
-<a href="https://anime-grid-demo.vercel.app"><img src="https://img.shields.io/badge/🚀_Launch_Demo-ff4d4d?style=for-the-badge" /></a>
+<a href="https://anime-grid-nine.vercel.app/"><img src="https://img.shields.io/badge/🚀_Launch_Demo-ff4d4d?style=for-the-badge" /></a>
 &nbsp;
 <a href="#9--getting-started"><img src="https://img.shields.io/badge/📦_Quick_Setup-7c3aed?style=for-the-badge" /></a>
 &nbsp;
@@ -290,13 +290,13 @@ sequenceDiagram
 
 | 🏠 Home — Masonry Grid | 🎌 Anime Detail |
 |:---:|:---:|
-| <img src="./screens/home.png" width="100%" /> | <img src="./screens/detail.png" width="100%" /> |
+| <img src="./screens/detail.png" width="100%" /> | <img src="./screens/home.png" width="100%" /> |
 
 | 📱 Mobile (320px) | 🌙 Neon Dark Close-Up |
 |:---:|:---:|
 | <img src="./screens/mobile.png" width="100%" /> | <img src="./screens/dark.png" width="100%" /> |
 
-> 📷 *Live at [anime-grid-demo.vercel.app](https://anime-grid-demo.vercel.app)*
+> 📷 *Live at [anime-grid-demo.vercel.app](https://anime-grid-nine.vercel.app/)*
 
 </div>
 
