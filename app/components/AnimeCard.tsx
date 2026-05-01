@@ -2,8 +2,9 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { Star, Tv2, Clock, Calendar } from "lucide-react";
+import { useState } from "react";
 import { Anime } from "@/types";
+import { Star, Tv2, Clock, Calendar } from "lucide-react";
 import { cardVariants } from "@/lib/animations";
 import styles from "./AnimeCard.module.css";
 
@@ -34,11 +35,48 @@ export default function AnimeCard({
   isFavourite,
   onToggleFav,
 }: AnimeCardProps) {
-  const score = parseFloat(anime.score);
+  const [status, setStatus] = useState<'loading' | 'error' | 'success'>('loading');
+  const [imgSrc, setImgSrc] = useState(anime.image.original);
+  const [retryAttempted, setRetryAttempted] = useState(false);
   
-  // Using your CSS variables for colors
-  const scoreColor =
-    score >= 9 ? "var(--gold)" : score >= 8.5 ? "var(--blue)" : "var(--accent2)";
+  const FALLBACK_SRC = "/placeholder.svg";
+  const score = parseFloat(anime.score);
+  const scoreColor = score >= 9 ? "var(--gold)" : score >= 8.5 ? "var(--blue)" : "var(--accent2)";
+
+  /**
+   * Handles 404 errors by fetching a fresh URL from the Jikan API 
+   * before showing the [ SIGNAL_LOST ] state.
+   */
+  const handleError = async () => {
+    if (retryAttempted) {
+      setStatus("error");
+      setImgSrc(FALLBACK_SRC);
+      return;
+    }
+
+    setRetryAttempted(true);
+
+    try {
+      // Dynamic fetch using Jikan API to find a working image URL
+      const res = await fetch(
+        `https://api.jikan.moe/v4/anime?q=${encodeURIComponent(anime.displayName)}&limit=1`
+      );
+      
+      if (!res.ok) throw new Error("API Fetch Failed");
+      
+      const data = await res.json();
+      const freshUrl = data.data[0]?.images?.jpg?.large_image_url;
+
+      if (freshUrl) {
+        setImgSrc(freshUrl);
+      } else {
+        throw new Error("No URL found");
+      }
+    } catch (err) {
+      setStatus("error");
+      setImgSrc(FALLBACK_SRC);
+    }
+  };
 
   return (
     <motion.article
@@ -48,33 +86,38 @@ export default function AnimeCard({
       whileHover={{ y: -6, transition: { duration: 0.2 } }}
       onClick={() => onSelect(anime)}
     >
-      {/* Image Wrap: This works with your 2/3 aspect ratio CSS */}
       <div className={styles.imgWrap}>
         <Image
-          src={anime.image.original}
+          src={imgSrc}
           alt={anime.displayName}
           fill
-          // Optimized for exactly 4 cards per row (25vw) on desktop
+          unoptimized={true} // Bypasses local DNS issues and strict hostname checks
+          priority={rank <= 6}
           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-          className={styles.img}
-          priority={rank <= 4}
-          onError={(e) => {
-            (e.target as HTMLImageElement).style.opacity = "0.2";
-          }}
+          className={`${styles.img} ${status === "success" ? "opacity-100" : "opacity-0"}`}
+          onLoadingComplete={() => setStatus("success")}
+          onError={handleError}
         />
         <div className={styles.imgOverlay} />
 
-        {/* Rank badge */}
+        {/* Dynamic Error UI */}
+        {status === "error" && (
+          <div className="absolute inset-0 flex flex-col items-center justify-center bg-black/60 backdrop-blur-sm z-10">
+            <div className="text-cyan-500 animate-pulse font-mono text-[10px] tracking-tighter uppercase">
+              [ SIGNAL_LOST ]
+            </div>
+            <div className="mt-2 h-[1px] w-12 bg-cyan-500/50" />
+          </div>
+        )}
+
         <div className={`${styles.rank} ${rank <= 3 ? styles.topRank : ""}`}>
           #{rank}
         </div>
 
-        {/* Score pill */}
         <div className={styles.scorePill} style={{ color: scoreColor }}>
-          {anime.score}
+          {score}
         </div>
 
-        {/* Fav button */}
         <motion.button
           className={`${styles.favBtn} ${isFavourite ? styles.favActive : ""}`}
           onClick={(e) => {
@@ -82,28 +125,17 @@ export default function AnimeCard({
             onToggleFav(anime.id);
           }}
           whileTap={{ scale: 0.85 }}
-          title={isFavourite ? "Remove from favourites" : "Add to favourites"}
-          aria-label={isFavourite ? "Remove from favourites" : "Add to favourites"}
         >
-          <Star
-            size={13}
-            fill={isFavourite ? "currentColor" : "none"}
-            strokeWidth={2}
-          />
+          <Star size={13} fill={isFavourite ? "currentColor" : "none"} strokeWidth={2} />
         </motion.button>
 
-        {/* Status indicator */}
         <div
           className={styles.statusDot}
-          style={{ 
-            backgroundColor: statusColors[anime.status],
-            color: statusColors[anime.status] 
-          }}
+          style={{ backgroundColor: statusColors[anime.status] }}
           title={statusLabels[anime.status]}
         />
       </div>
 
-      {/* Body Section */}
       <div className={styles.body}>
         <h3 className={styles.title}>{anime.displayName}</h3>
 
@@ -123,7 +155,7 @@ export default function AnimeCard({
         </div>
 
         <div className={styles.genres}>
-          {anime.genre.slice(0, 2).map((g) => (
+          {anime.genre.slice(0, 2).map((g: string) => (
             <span key={g} className={styles.genre}>
               {g}
             </span>

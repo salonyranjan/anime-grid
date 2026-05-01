@@ -1,10 +1,5 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
-
-/**
- * Metadata configuration for AnimeGrid.
- * Setting metadataBase resolves the warning for social media image resolution.
- */
 export const metadata: Metadata = {
   metadataBase: new URL(
     process.env.NODE_ENV === "production"
@@ -34,10 +29,6 @@ export const metadata: Metadata = {
     ],
   },
 };
-
-/**
- * Viewport settings to ensure the dark theme is respected by mobile browsers.
- */
 export const viewport: Viewport = {
   themeColor: "#080a0f",
   colorScheme: "dark",
