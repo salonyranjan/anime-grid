@@ -43,6 +43,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning translate="no">
       <body>
         {children}
+        <footer className="footer">© 2026 Salony Ranjan. All rights reserved.</footer>
       </body>
     </html>
   );
